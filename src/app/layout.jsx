@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { satoshi } from "@/styles/fonts";
+import { satoshi, baloo } from "@/styles/fonts";
 import TopBanner from "@/components/layout/Banner/TopBanner";
 import TopNavbar from "@/components/layout/Navbar/TopNavbar";
 import Footer from "@/components/layout/Footer";
@@ -16,12 +16,12 @@ export const viewport = {
 
 export default function RootLayout({ children, }) {
     return (<html lang="en">
-      <body className={satoshi.className}>
+      <body className={baloo.className}>
         <HolyLoader color="#868686"/>
         <TopBanner />
         <Providers>
           <TopNavbar />
-          <div className="">{children}</div>
+          <div className="w-full transform">{children}</div>
         </Providers>
         <Footer />
       </body>

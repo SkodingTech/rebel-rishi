@@ -1,10 +1,14 @@
 'use client';
 import { useState } from 'react';
-import { TfiReload } from "react-icons/tfi";
+import { LiaTshirtSolid } from "react-icons/lia";
+import { PiPantsLight } from "react-icons/pi";
+import { PiDress } from "react-icons/pi";
+import { PiDressLight } from "react-icons/pi";
+import { IoShirtOutline } from "react-icons/io5";
 
 const FeatureTWO = () => {
   const [activeFeature, setActiveFeature] = useState(0);
-
+  const iconSize = "60"
   const features = [
     {
       id: 0,
@@ -14,28 +18,35 @@ const FeatureTWO = () => {
   ];
 
   return (
-    <section className="w-full bg-[#fe4536] dark:bg-gray-700">
-      <div className='text-white font-base text-center py-4 text-2xl'>
+    <section className="w-full bg-[#fe4536] dark:bg-gray-700 py-4">
+      <div className='text-white font-base font-semibold text-center py-4 text-2xl'>
         SHOP BY CATEGORIES
       </div>
       <div className='flex items-center justify-center px-4'>
-        <p className='text-white text-center max-w-2xl text-sm'>
+        <p className='text-white text-center max-w-4xl text-sm'>
           At Rebel Rishi, we understand that every individual has their unique style and preferences. That’s why we’ve organized our collection into easy-to-browse categories, making it simpler for you to find exactly what you’re looking for. Explore our diverse range and discover pieces that resonate with your personal aesthetic!
         </p>
       </div>
 
       <div className='flex justify-center items-center px-4'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-8 w-full max-w-6xl'>
+          
           {["Trendy Shirts", "Smart Casuals", "Ethnic Outfits", "Ethnic Kurtas", "Stylish Dresses", "Statement Tops"].map((category, index) => (
-            <div key={index} className="bg-white shadow-sm flex flex-col justify-center items-center rounded-2xl p-5 w-full max-w-xs mx-auto">
+            <div key={index} className="bg-white shadow-md flex flex-col hover:scale-105 transition duration-500 cursor-pointer justify-center items-center rounded-2xl p-5 w-full max-w-xs mx-auto">
               <div className='flex justify-center items-center'>
                 <div className="bg-[#edfbfa] w-36 h-36 p-4 rounded-full flex justify-center items-center"> 
-                  <TfiReload size="24" />
+                 {category === "Trendy Shirts" ? (<LiaTshirtSolid size={iconSize} />): null} 
+                 {category === "Smart Casuals" ? (<PiPantsLight size={iconSize} />): null} 
+                 {category === "Ethnic Outfits" ? (<IoShirtOutline size={iconSize} />): null} 
+                 {category === "Ethnic Kurtas" ? (<PiDress size={iconSize} />): null} 
+                 {category === "Stylish Dresses" ? (<LiaTshirtSolid size={iconSize} />): null} 
+                 {category === "Statement Tops" ? (<PiDressLight size={iconSize} />): null} 
                 </div>
               </div>
               <h1 className="text-xl sm:text-base font-semibold p-3 text-center">{category}</h1>
             </div>
           ))}
+
         </div>
       </div>
     </section>

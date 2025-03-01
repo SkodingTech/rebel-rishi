@@ -7,10 +7,10 @@ const ShowcaseSection = () => {
 
         <div className="text-center">
           <div className="py-7">
-            <h1 className="text-3xl  md:text-xl font-semibold text-gray-800 dark:text-white">
+            <h1 className="text-xl  md:text-3xl font-semibold text-gray-800 dark:text-white">
               Premium Handpicked
             </h1>
-            <p>Exclusivity in Every Stitch, curated with precision.</p>
+            <p className="text-xs sm:text-sm">Exclusivity in Every Stitch, curated with precision.</p>
           </div>
         </div>
 
@@ -23,10 +23,10 @@ const ShowcaseSection = () => {
             {/* Left Side */}
             <div className="w-full relative md:w-1/2 items-center h-auto md:py-12 flex">
               <div
-                className="absolute bg-gray-300 w-[85%] h-[70%] right-0 bg-cover"
+                className="absolute bg-gray-300 w-[85%] h-full right-0 bg-cover"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    "url('/images/home/rc1.png')",
                 }}
               />
 
@@ -37,7 +37,7 @@ const ShowcaseSection = () => {
 
               <div className="">
                 <div className="flex flex-row md:!flex-col mt-4 md:!mt-0">
-                  <div className="w-11/12">
+                  <div className="w-full">
                     <h1 className="text-3xl mt-2 md:text-xl font-semibold text-gray-800 dark:text-white">
                       Exclusivity in Every Stitch
                     </h1>
@@ -50,7 +50,7 @@ const ShowcaseSection = () => {
                 </div>
               </div>
 
-              <div className="bg-white p-4 shadow-md">
+              <div className="bg-white p-4 shadow-sm">
                 <div className="flex flex-row md:!flex-col mt-4 md:!mt-0">
                   <div className="w-full">
                     <h1 className="text-3xl mt-2 md:text-xl font-semibold text-gray-800 dark:text-white">

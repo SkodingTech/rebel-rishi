@@ -3,11 +3,12 @@ import Rating from "../ui/Rating";
 import Image from "next/image";
 import Link from "next/link";
 const ProductCard = ({ data }) => {
-    return (<Link href={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`} className="flex flex-col items-start aspect-auto">
-      <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
-        <Image src={data.srcUrl} width={295} height={298} className="rounded-md w-full h-full object-contain hover:scale-110 transition-all duration-500" alt={data.title} priority/>
+    return (
+    <Link href={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`} className="flex flex-col items-start aspect-auto">
+      <div className="border p-2 w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
+        <Image src={data.srcUrl} width={295} height={298} className="w-full h-full object-contain hover:scale-110 transition-all duration-500" alt={data.title} priority/>
       </div>
-      <strong className="text-black xl:text-xl">{data.title}</strong>
+      <strong className="text-black xl:text-lg">{data.title}</strong>
       <div className="flex items-end mb-1 xl:mb-2">
         <Rating initialValue={data.rating} allowFraction SVGclassName="inline-block" emptyClassName="fill-gray-50" size={19} readonly/>
         <span className="text-black text-xs xl:text-sm ml-[11px] xl:ml-[13px] pb-0.5 xl:pb-0">

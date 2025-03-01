@@ -3,12 +3,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "
 import MobileFilters from "@/components/shop-page/filters/MobileFilters";
 import Filters from "@/components/shop-page/filters";
 import { FiSliders } from "react-icons/fi";
-import { newArrivalsData, relatedProductData, topSellingData } from "../page";
+import { newArrivalsData, topSellingData, relatedProductData } from "@/lib/data/product";
+
 import ProductCard from "@/components/common/ProductCard";
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
+
 export default function ShopPage() {
     return (<main className="pb-20">
-      <div className="max-w-frame mx-auto px-4 xl:px-0">
+      <div className="px-4 xl:px-0 mt-4 mb-8 mx-4 sm:mx-20 md:mx-20">
         <hr className="h-[1px] border-t-black/10 mb-5 sm:mb-6"/>
         <BreadcrumbShop />
         <div className="flex md:space-x-5 items-start">

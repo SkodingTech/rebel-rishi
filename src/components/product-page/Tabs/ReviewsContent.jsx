@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select";
 import ReviewCard from "@/components/common/ReviewCard";
-import { reviewsData } from "@/app/page";
+import { reviewsData } from "@/lib/data/product";
+
 import Link from "next/link";
+
 const ReviewsContent = () => {
     return (<section>
       <div className="flex items-center justify-between flex-col sm:flex-row mb-5 sm:mb-6">
@@ -40,4 +42,5 @@ const ReviewsContent = () => {
       </div>
     </section>);
 };
+
 export default ReviewsContent;

@@ -81,3 +81,21 @@
   }
 }
 
+
+/* If using a CSS file */
+.navigation-menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  color: #1a1a1a; /* Dark gray */
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #2563eb; /* Blue */
+}
+

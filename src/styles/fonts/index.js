@@ -1,4 +1,11 @@
 import localFont from "next/font/local";
+import { Baloo_2 } from 'next/font/google';
+
+export const baloo = Baloo_2({
+    subsets: ["latin"],
+    variable: "--font-sans",
+});
+
 const integralCF = localFont({
     src: [
         {
